@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AppBar, Toolbar, IconButton, MenuItem, Badge, Menu, Typography } from "@material-ui/core";
+import { AppBar, Toolbar, IconButton, Badge, Typography } from "@material-ui/core";
 import { ShoppingCart } from '@material-ui/icons';
 import { Link, useLocation } from 'react-router-dom';
 
