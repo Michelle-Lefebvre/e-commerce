@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { AppBar, Toolbar, IconButton, MenuItem, Badge, Menu, Typography } from "@material-ui/core";
 import { ShoppingCart } from '@material-ui/icons';
 import { Link, useLocation } from 'react-router-dom';
@@ -6,11 +6,16 @@ import { Link, useLocation } from 'react-router-dom';
 import logo from '../../assets/logo-ebike.png';
 import useStyles from './styles';
 
+import DateMomentUtils from '@date-io/moment';
+import { DateTimePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';
+
+
 
 
 const Navbar = ({ totalItems }) => {
     const classes = useStyles();
     const location = useLocation();
+    const [selectedDate, handleDateChange] = useState(new Date());
     
     return (
         <>
@@ -20,6 +25,19 @@ const Navbar = ({ totalItems }) => {
                         <img src={logo} alt="Commerce.js" height="25px" className={classes.image} />
                         Mike's Bikes
                     </Typography>
+                    <div>
+                        <Typography >Book a Test Ride!</Typography>
+                        <MuiPickersUtilsProvider utils={DateMomentUtils}>
+                            <DateTimePicker 
+                            clearable 
+                            value={selectedDate} 
+                            onChange={handleDateChange} 
+                            minDate={new Date()}
+                            color="secondary"
+                            placeholder="Select date &amp; time" 
+                            />
+                        </MuiPickersUtilsProvider>
+                    </div>
                     <div className={classes.grow}/>
                     {location.pathname === '/' && (
                     <div className={classes.button}>
