@@ -2,21 +2,20 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles((theme) => ({
   foot: {
-    backgroundColor: '#fff',
+    backgroundColor: '#ffffff',
     display: 'flex',
     flexDirection: 'column',
-    alignContent: 'center',
-    textAlign: 'center'
+    textAlign: 'center',
+    width: '100%',
+    position: 'fixed',
+    bottom: '0vh',
   },
   copy: {
-    boxSizing: 'border-box',
-    width: '100%',
     height: '25%',
     margin: '15px', 
   },
   credit: {
     fontSize:'10px',
-    width: '100%',
+    marginBottom: '15px'
   },
-  
 }));

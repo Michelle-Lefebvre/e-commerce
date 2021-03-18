@@ -6,11 +6,15 @@ export default makeStyles(() => ({
   },
   media: {
     height: 0,
-    paddingTop: '56.25%', // 16:9
+    paddingTop: '75%', // 4:3
+  },
+  card: {
+    height: '100%',
   },
   cardActions: {
     display: 'flex',
     justifyContent: 'flex-end',
+    alignContent: 'flex-end',
   },
   cardContent: {
     display: 'flex',

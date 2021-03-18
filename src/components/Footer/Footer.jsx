@@ -9,7 +9,7 @@ const Footer = () => {
     const classes = useStyles();
 
     return (
-        <BottomNavigation position="static" className={classes.foot} color="inherit">
+        <BottomNavigation variant="div" position="static" className={classes.foot} color="inherit">
               <Typography variant="body1" className={classes.copy} color="inherit">
                 © 2021 Valtech Future Studio
               </Typography>
