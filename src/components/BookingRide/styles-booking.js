@@ -24,4 +24,10 @@ export default makeStyles((theme) => ({
         marginTop: "60px",
         textAlign: "center",
     },
+    image: {
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        margin: '10% auto',
+      },
 }));

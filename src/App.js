@@ -66,11 +66,11 @@ const App = () => {
         <Router>
             <div>
             <Navbar totalItems={cart.total_items} />
-         
-            <Switch>
-                <Route exact path="/bookingRide">
+            <Route exact path="/bookingRide">
                     <BookingRide />
                 </Route>
+            <Switch>
+               
                 <Route exact path="/">
                     <Products products={products} onAddToCart={handleAddToCart} />
                 </Route>
